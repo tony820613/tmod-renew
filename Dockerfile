@@ -30,8 +30,8 @@ COPY --from=build /terraria-server ./
 RUN apk update &&\
     apk add --no-cache procps tmux
 RUN ln -s ${HOME}/.local/share/Terraria/ /terraria
-COPY inject.sh /usr/local/bin/inject
-COPY handle-idle.sh /usr/local/bin/handle-idle
+#COPY inject.sh /usr/local/bin/inject
+#COPY handle-idle.sh /usr/local/bin/handle-idle
 
 EXPOSE 7777
 #ENV TMOD_SHUTDOWN_MSG="Shutting down!"
